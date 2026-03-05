@@ -1,0 +1,245 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Vibrant Cartoon Celebration Theme */
+  --primary: #FF69B4;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #FF1493;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #FFD700;
+  --chart-2: #FF69B4;
+  --chart-3: #FF1493;
+  --chart-4: #E85D75;
+  --chart-5: #D4A5B0;
+  --radius: 1.2rem;
+  --background: #FFFACD;
+  --foreground: #4B0082;
+  --card: #FFFFFF;
+  --card-foreground: #4B0082;
+  --popover: #FFFFFF;
+  --popover-foreground: #4B0082;
+  --secondary: #FF1493;
+  --secondary-foreground: #FFFFFF;
+  --muted: #FFD6E8;
+  --muted-foreground: #6B4C7A;
+  --accent: #FFD700;
+  --accent-foreground: #4B0082;
+  --destructive: #FF1493;
+  --destructive-foreground: #FFFFFF;
+  --border: #FFD6E8;
+  --input: #FFFFFF;
+  --ring: #FF69B4;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #4B0082;
+  --sidebar-accent: #FFD700;
+  --sidebar-accent-foreground: #4B0082;
+  --sidebar-border: #FFD6E8;
+  --sidebar-ring: #FF69B4;
+}
+
+.dark {
+  /* Dark mode uses same vibrant colors */
+  --primary: #FF69B4;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #FF1493;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #1a0f2e;
+  --foreground: #FFFFFF;
+  --card: #2d1b4e;
+  --card-foreground: #FFFFFF;
+  --popover: #2d1b4e;
+  --popover-foreground: #FFFFFF;
+  --secondary: #FF1493;
+  --secondary-foreground: #FFFFFF;
+  --muted: #6B4C7A;
+  --muted-foreground: #FFD6E8;
+  --accent: #FFD700;
+  --accent-foreground: #4B0082;
+  --destructive: #FF1493;
+  --destructive-foreground: #FFFFFF;
+  --border: #6B4C7A;
+  --input: #2d1b4e;
+  --ring: #FF69B4;
+  --chart-1: #FFD700;
+  --chart-2: #FF69B4;
+  --chart-3: #FF1493;
+  --chart-4: #E85D75;
+  --chart-5: #D4A5B0;
+  --sidebar: #2d1b4e;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #FFD700;
+  --sidebar-accent-foreground: #4B0082;
+  --sidebar-border: #6B4C7A;
+  --sidebar-ring: #FF69B4;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 20, 147, 0.8);
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-300/50 cursor-pointer;
+  }
+
+  .gradient-pink {
+    @apply bg-gradient-to-br from-pink-400 via-pink-300 to-pink-200;
+  }
+
+  .gradient-celebration {
+    @apply bg-gradient-to-r from-pink-300 via-yellow-200 to-pink-300;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
