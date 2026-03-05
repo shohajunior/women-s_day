@@ -195,6 +195,9 @@ export default function Home() {
             <span className="animate-float" style={{ animationDelay: "1s" }}>🌺</span>
             <span className="animate-float" style={{ animationDelay: "1.5s" }}>✨</span>
           </div>
+          <p className="text-sm text-purple-900 mt-4 font-bold bg-white/80 px-4 py-2 rounded-full inline-block">
+            Made by 9-B Class
+          </p>
         </div>
       </section>
     </div>
