@@ -26,7 +26,7 @@ const students: Student[] = [
     id: "1",
     name: "Sarah",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Dear Mom, Thank you for all your love and support. You are my inspiration every single day. Happy Women's Day!",
+    letter: "Aziz onam, barcha sevgingiz va qo'llab-quvvatlashingiz uchun rahmat. Siz mening har kungi ilhom manbaimsiz. 8-mart bayrami muborak!",
     slideImages: [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
@@ -36,7 +36,7 @@ const students: Student[] = [
     id: "2",
     name: "Emma",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Mom, you are the strongest woman I know. Thank you for believing in me. I love you so much!",
+    letter: "Onam, siz men bilgan eng kuchli ayolsiz. Menga ishonganingiz uchun rahmat. Sizni juda yaxshi ko'raman!",
     slideImages: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -46,7 +46,7 @@ const students: Student[] = [
     id: "3",
     name: "Olivia",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "To my amazing mom, thank you for all the sacrifices. You make the world beautiful. Happy Women's Day!",
+    letter: "Mening ajoyib onamga, barcha qurbonliklaringiz uchun rahmat. Siz dunyoni go'zal qilasiz. 8-mart bayrami muborak!",
     slideImages: [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -56,7 +56,7 @@ const students: Student[] = [
     id: "4",
     name: "Sophia",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Mom, you are my hero. Thank you for everything you do. I am so proud to be your daughter!",
+    letter: "Onam, siz mening qahramonimsiz. Qilgan barcha ishlaringiz uchun rahmat. Sizning qizing bo'lishdan juda faxrlanaman!",
     slideImages: [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
@@ -66,7 +66,7 @@ const students: Student[] = [
     id: "5",
     name: "Isabella",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Dear Mom, your love and guidance shaped who I am today. Thank you for being my rock!",
+    letter: "Aziz onam, sizning sevgingiz va rahbarligingiz mening kimligimni shakllantirdi. Mening tosh bo'lganingiz uchun rahmat!",
     slideImages: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
@@ -76,7 +76,7 @@ const students: Student[] = [
     id: "6",
     name: "Mia",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Mom, you inspire me every day with your strength and kindness. I love you more than words can say!",
+    letter: "Onam, sizning kuchingiz va mehribonligingiz bilan har kuni meni ilhomlantirasiz. So'zlar aytib bera olmaydigan darajada sizni yaxshi ko'raman!",
     slideImages: [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -101,14 +101,8 @@ export default function StudentTribute() {
   }, [student, navigate]);
 
   useEffect(() => {
-    if (!autoPlay || !student) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % student.slideImages.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [autoPlay, student]);
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!student) {
     return null;
@@ -146,7 +140,7 @@ export default function StudentTribute() {
             className="flex items-center gap-2 text-purple-900 hover:text-purple-700 font-bold text-lg transition-colors hover:scale-110 transform"
           >
             <ArrowLeft className="w-6 h-6" />
-            Back to All Tributes
+            Barcha tabriklarga qaytish
           </button>
         </div>
       </div>
@@ -156,10 +150,10 @@ export default function StudentTribute() {
         {/* Student Header */}
         <div className="text-center mb-12 animate-bounce-in">
           <h1 className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-400 to-pink-600 mb-2">
-            {student.name}'s Tribute
+            {student.name}ning tabrigi
           </h1>
           <p className="text-xl text-purple-900 font-semibold">
-            A heartfelt message for Mom
+            Onam uchun samimiy xabar
           </p>
         </div>
 
@@ -167,12 +161,20 @@ export default function StudentTribute() {
         <div className="mb-16 animate-bounce-in" style={{ animationDelay: "0.1s" }}>
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden group">
             {/* Main Slide */}
-            <div className="relative w-full aspect-video bg-gradient-to-br from-pink-100 to-yellow-100">
-              <img
-                src={student.slideImages[currentSlide]}
-                alt={`Slide ${currentSlide + 1}`}
-                className="w-full h-full object-cover"
-              />
+            <div className="relative w-full aspect-video bg-gradient-to-br from-pink-100 to-yellow-100 overflow-hidden">
+              <div
+                className="flex w-full h-full transition-transform duration-1000 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {student.slideImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-full object-cover flex-shrink-0"
+                  />
+                ))}
+              </div>
 
               {/* Slide Counter */}
               <div className="absolute top-4 right-4 bg-pink-500/80 text-white px-4 py-2 rounded-full font-bold text-lg backdrop-blur-sm">
@@ -248,7 +250,7 @@ export default function StudentTribute() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-4xl">💌</span>
                 <h2 className="text-3xl sm:text-4xl font-bold text-pink-600">
-                  A Letter for Mom
+                  Onamga maktub
                 </h2>
               </div>
 
@@ -274,35 +276,13 @@ export default function StudentTribute() {
             </div>
           </div>
         </div>
-
-        {/* Navigation to Other Students */}
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-purple-900 mb-6">
-            View More Tributes
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {students.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => navigate(`/student/${s.id}`)}
-                className={`px-6 py-3 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-110 ${
-                  s.id === student.id
-                    ? "bg-pink-500 text-white shadow-lg"
-                    : "bg-white text-pink-600 border-2 border-pink-300 hover:bg-pink-50"
-                }`}
-              >
-                {s.name}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Footer */}
       <div className="mt-20 py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-300 via-yellow-200 to-pink-300">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg text-purple-900 font-semibold mb-4">
-            Happy Women's Day! 🌸
+            8-mart bayrami muborak! 🌸
           </p>
           <div className="flex justify-center gap-4 text-4xl">
             <span className="animate-float">💐</span>

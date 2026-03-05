@@ -26,7 +26,7 @@ const students: Student[] = [
     id: "1",
     name: "Sarah",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Dear Mom, Thank you for all your love and support. You are my inspiration every single day. Happy Women's Day!",
+    letter: "Aziz onam, barcha sevgingiz va qo'llab-quvvatlashingiz uchun rahmat. Siz mening har kungi ilhom manbaimsiz. 8-mart bayrami muborak!",
     slideImages: [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
@@ -36,7 +36,7 @@ const students: Student[] = [
     id: "2",
     name: "Emma",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Mom, you are the strongest woman I know. Thank you for believing in me. I love you so much!",
+    letter: "Onam, siz men bilgan eng kuchli ayolsiz. Menga ishonganingiz uchun rahmat. Sizni juda yaxshi ko'raman!",
     slideImages: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -46,7 +46,7 @@ const students: Student[] = [
     id: "3",
     name: "Olivia",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "To my amazing mom, thank you for all the sacrifices. You make the world beautiful. Happy Women's Day!",
+    letter: "Mening ajoyib onamga, barcha qurbonliklaringiz uchun rahmat. Siz dunyoni go'zal qilasiz. 8-mart bayrami muborak!",
     slideImages: [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -56,7 +56,7 @@ const students: Student[] = [
     id: "4",
     name: "Sophia",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Mom, you are my hero. Thank you for everything you do. I am so proud to be your daughter!",
+    letter: "Onam, siz mening qahramonimsiz. Qilgan barcha ishlaringiz uchun rahmat. Sizning qizing bo'lishdan juda faxrlanaman!",
     slideImages: [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
@@ -66,7 +66,7 @@ const students: Student[] = [
     id: "5",
     name: "Isabella",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Dear Mom, your love and guidance shaped who I am today. Thank you for being my rock!",
+    letter: "Aziz onam, sizning sevgingiz va rahbarligingiz mening kimligimni shakllantirdi. Mening tosh bo'lganingiz uchun rahmat!",
     slideImages: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
@@ -76,7 +76,7 @@ const students: Student[] = [
     id: "6",
     name: "Mia",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Mom, you inspire me every day with your strength and kindness. I love you more than words can say!",
+    letter: "Onam, sizning kuchingiz va mehribonligingiz bilan har kuni meni ilhomlantirasiz. So'zlar aytib bera olmaydigan darajada sizni yaxshi ko'raman!",
     slideImages: [
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
@@ -113,22 +113,22 @@ export default function Home() {
           {/* Hero Banner Image */}
           <div className="mb-12 rounded-3xl overflow-hidden shadow-2xl animate-bounce-in">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663402560774/3Qpqw9CUve6nPfccwYuVZS/hero-banner-aDs2XyqRTKdsJjtwP39rCC.webp"
-              alt="Happy Women's Day"
+              src="/images/banner.png"
+              alt="8-mart bayrami"
               className="w-full h-auto object-cover"
             />
           </div>
 
           {/* Title and Description */}
           <div className="text-center mb-16 animate-bounce-in" style={{ animationDelay: "0.2s" }}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-400 to-pink-600 mb-4">
-              Celebrating Our Moms
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-400 to-pink-600 mb-4">
+              8 MART BAYRAMINGIZ BILAN TABRIKLAYMIZ!
             </h1>
             <p className="text-xl sm:text-2xl text-purple-900 font-semibold mb-2">
-              A Special Tribute from Our Students
+              Bizning o'quvchilarimizdan maxsus tabrik
             </p>
             <p className="text-lg text-purple-700 max-w-2xl mx-auto">
-              Click on any card to see a heartfelt slideshow and a beautiful letter written by each student for their amazing mom
+              Har qanday kartani bosib, har bir o'quvchining o'zining ajoyib onasi uchun yozgan samimiy slayd-shou va chiroyli maktubni ko'ring
             </p>
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-3xl font-bold mb-2">{student.name}</h3>
                   <div className="flex items-center gap-2 text-pink-200 group-hover:text-yellow-300 transition-colors">
-                    <span className="text-sm font-semibold">View Tribute</span>
+                    <span className="text-sm font-semibold">Tabrikni ko'rish</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -184,10 +184,10 @@ export default function Home() {
       <section className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-300 via-yellow-200 to-pink-300 mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-purple-900 mb-4">
-            Happy Women's Day! 🌸
+            8-mart bayrami muborak! 🌸
           </h2>
           <p className="text-lg text-purple-800 mb-6">
-            To all the incredible women who inspire us, support us, and make our world brighter.
+            Barcha ajoyib ayollarga, bizni ilhomlantirgan, qo'llab-quvvatlagan va dunyomizni yorqinroq qilgan ayollarga.
           </p>
           <div className="flex justify-center gap-4 text-4xl">
             <span className="animate-float">💐</span>
@@ -196,7 +196,7 @@ export default function Home() {
             <span className="animate-float" style={{ animationDelay: "1.5s" }}>✨</span>
           </div>
           <p className="text-sm text-purple-900 mt-4 font-bold bg-white/80 px-4 py-2 rounded-full inline-block">
-            Made by 9-B Class
+            9-B sinf tomonidan yaratilgan
           </p>
         </div>
       </section>
