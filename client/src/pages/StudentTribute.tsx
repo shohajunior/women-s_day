@@ -24,65 +24,39 @@ interface Student {
 const students: Student[] = [
   {
     id: "1",
-    name: "Sarah",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Aziz onam, barcha sevgingiz va qo'llab-quvvatlashingiz uchun rahmat. Siz mening har kungi ilhom manbaimsiz. 8-mart bayrami muborak!",
+    name: "Elbek",
+    image: "/images/elbek/elbek_card.jpg",
+    letter: "Aziz onajonim sizni 8-mart bayrami bilan chin yurakdan tabriklayman. Sizga sog‘lik baxt va doimo quvonch tilayman siz meni eng mehribon va qadrli insonimsiz.",
     slideImages: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
+      "/images/elbek/photo1.jpg",
+      "/images/elbek/photo2.jpg",
+      "/images/elbek/photo3.jpg",
+      "/images/elbek/photo4.jpg",
     ],
-  },
-  {
+  },  {
     id: "2",
-    name: "Emma",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Onam, siz men bilgan eng kuchli ayolsiz. Menga ishonganingiz uchun rahmat. Sizni juda yaxshi ko'raman!",
+    name: "Abdulhamid",
+    image: "/images/hamid/hamid_card.jpg",
+    letter: "Aziz onajonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
     slideImages: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
+      "/images/hamid/photo1.jpg",
+      "/images/hamid/photo2.jpg",
+      "/images/hamid/photo3.jpg",
     ],
   },
   {
     id: "3",
-    name: "Olivia",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Mening ajoyib onamga, barcha qurbonliklaringiz uchun rahmat. Siz dunyoni go'zal qilasiz. 8-mart bayrami muborak!",
+    name: "Alixan",
+    image: "/images/alixan/alixan_card.jpg",
+    letter: "Дорогая мама поздравляю тебя с 8 марта, желаю тебе всегда оставаться такой же красивой целеустремленной и самой лучшей мамой на свете 💋",
     slideImages: [
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
+      "/images/alixan/photo1.jpg",
+      "/images/alixan/photo2.jpg",
+      "/images/alixan/photo3.jpg",
+      "/images/alixan/photo4.jpg",
+      "/images/alixan/photo5.jpg",
     ],
-  },
-  {
-    id: "4",
-    name: "Sophia",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Onam, siz mening qahramonimsiz. Qilgan barcha ishlaringiz uchun rahmat. Sizning qizing bo'lishdan juda faxrlanaman!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-    ],
-  },
-  {
-    id: "5",
-    name: "Isabella",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Aziz onam, sizning sevgingiz va rahbarligingiz mening kimligimni shakllantirdi. Mening tosh bo'lganingiz uchun rahmat!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-    ],
-  },
-  {
-    id: "6",
-    name: "Mia",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Onam, sizning kuchingiz va mehribonligingiz bilan har kuni meni ilhomlantirasiz. So'zlar aytib bera olmaydigan darajada sizni yaxshi ko'raman!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-    ],
-  },
-];
+  },];
 
 export default function StudentTribute() {
   const params = useParams<{ id: string }>();
@@ -104,22 +78,31 @@ export default function StudentTribute() {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    if (!autoPlay || !student) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % student.slideImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [autoPlay, student]);
+
   if (!student) {
     return null;
   }
 
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % student.slideImages.length);
-    setAutoPlay(false);
     setShowConfetti(true);
-    setTimeout(() => setShowConfetti(false), 4000);
+    setTimeout(() => setShowConfetti(false), 5000);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + student.slideImages.length) % student.slideImages.length);
-    setAutoPlay(false);
     setShowConfetti(true);
-    setTimeout(() => setShowConfetti(false), 4000);
+    setTimeout(() => setShowConfetti(false), 5000);
   };
 
   return (
@@ -160,8 +143,20 @@ export default function StudentTribute() {
         {/* Slideshow Section */}
         <div className="mb-16 animate-bounce-in" style={{ animationDelay: "0.1s" }}>
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden group">
+            {/* Blurred Background */}
+            <div 
+              className="absolute inset-0 z-0"
+              style={{
+                backgroundImage: `url('${student.slideImages[currentSlide]}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'blur(30px)',
+              }}
+            />
             {/* Main Slide */}
-            <div className="relative w-full aspect-video bg-gradient-to-br from-pink-100 to-yellow-100 overflow-hidden">
+            <div 
+              className="relative w-full aspect-video overflow-hidden z-10"
+            >
               <div
                 className="flex w-full h-full transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -171,14 +166,9 @@ export default function StudentTribute() {
                     key={index}
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-cover flex-shrink-0"
+                    className="w-full h-full object-contain flex-shrink-0"
                   />
                 ))}
-              </div>
-
-              {/* Slide Counter */}
-              <div className="absolute top-4 right-4 bg-pink-500/80 text-white px-4 py-2 rounded-full font-bold text-lg backdrop-blur-sm">
-                {currentSlide + 1} / {student.slideImages.length}
               </div>
 
               {/* Decorative Elements on Slide */}
@@ -187,7 +177,7 @@ export default function StudentTribute() {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none z-20">
               <button
                 onClick={prevSlide}
                 className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 hover:shadow-pink-400/50 hover:shadow-2xl"
@@ -204,13 +194,12 @@ export default function StudentTribute() {
             </div>
 
             {/* Slide Indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
               {student.slideImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => {
                     setCurrentSlide(index);
-                    setAutoPlay(false);
                   }}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide
@@ -220,16 +209,6 @@ export default function StudentTribute() {
                 />
               ))}
             </div>
-          </div>
-
-          {/* Autoplay Toggle */}
-          <div className="mt-4 flex justify-center">
-            <button
-              onClick={() => setAutoPlay(!autoPlay)}
-              className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105 transform"
-            >
-              {autoPlay ? "⏸ Pause Slideshow" : "▶ Play Slideshow"}
-            </button>
           </div>
         </div>
 

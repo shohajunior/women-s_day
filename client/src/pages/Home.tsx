@@ -24,65 +24,39 @@ interface Student {
 const students: Student[] = [
   {
     id: "1",
-    name: "Sarah",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Aziz onam, barcha sevgingiz va qo'llab-quvvatlashingiz uchun rahmat. Siz mening har kungi ilhom manbaimsiz. 8-mart bayrami muborak!",
+    name: "Elbek",
+    image: "/images/elbek/elbek_card.jpg",
+    letter: "Aziz onam, siz mening hayotimning eng muhim shaxsiysiz. Barcha mehribonlik va qo'llab-quvvatlashingiz uchun rahmat. Sizни bilan faxrlanaman!",
     slideImages: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
+      "/images/elbek/photo1.jpg",
+      "/images/elbek/photo2.jpg",
+      "/images/elbek/photo3.jpg",
+      "/images/elbek/photo4.jpg",
     ],
-  },
-  {
+  },  {
     id: "2",
-    name: "Emma",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Onam, siz men bilgan eng kuchli ayolsiz. Menga ishonganingiz uchun rahmat. Sizni juda yaxshi ko'raman!",
+    name: "Abdulhamid",
+    image: "/images/hamid/hamid_card.jpg",
+    letter: "Aziz onajonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
     slideImages: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
+      "/images/hamid/photo1.jpg",
+      "/images/hamid/photo2.jpg",
+      "/images/hamid/photo3.jpg",
     ],
   },
   {
     id: "3",
-    name: "Olivia",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Mening ajoyib onamga, barcha qurbonliklaringiz uchun rahmat. Siz dunyoni go'zal qilasiz. 8-mart bayrami muborak!",
+    name: "Alixan",
+    image: "/images/alixan/alixan_card.jpg",
+    letter: "Дорогая мама поздравляю тебя с 8 марта, желаю тебе всегда оставаться такой же красивой целеустремленной и самой лучшей мамой на свете 💋",
     slideImages: [
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
+      "/images/alixan/photo1.jpg",
+      "/images/alixan/photo2.jpg",
+      "/images/alixan/photo3.jpg",
+      "/images/alixan/photo4.jpg",
+      "/images/alixan/photo5.jpg",
     ],
-  },
-  {
-    id: "4",
-    name: "Sophia",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    letter: "Onam, siz mening qahramonimsiz. Qilgan barcha ishlaringiz uchun rahmat. Sizning qizing bo'lishdan juda faxrlanaman!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-    ],
-  },
-  {
-    id: "5",
-    name: "Isabella",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    letter: "Aziz onam, sizning sevgingiz va rahbarligingiz mening kimligimni shakllantirdi. Mening tosh bo'lganingiz uchun rahmat!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-    ],
-  },
-  {
-    id: "6",
-    name: "Mia",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    letter: "Onam, sizning kuchingiz va mehribonligingiz bilan har kuni meni ilhomlantirasiz. So'zlar aytib bera olmaydigan darajada sizni yaxshi ko'raman!",
-    slideImages: [
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
-    ],
-  },
-];
+  },];
 
 export default function Home() {
   const [animateCards, setAnimateCards] = useState(false);
@@ -153,7 +127,7 @@ export default function Home() {
                 <img
                   src={student.image}
                   alt={student.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 {/* Gradient Overlay */}
@@ -187,7 +161,7 @@ export default function Home() {
             8-mart bayrami muborak! 🌸
           </h2>
           <p className="text-lg text-purple-800 mb-6">
-            Barcha ajoyib ayollarga, bizni ilhomlantirgan, qo'llab-quvvatlagan va dunyomizni yorqinroq qilgan ayollarga.
+            Barcha ajoyib onalarimizga, bizni ilhomlantirgan, qo'llab-quvvatlagan va dunyomizni yorqinroq qilgan onalarimizga.
           </p>
           <div className="flex justify-center gap-4 text-4xl">
             <span className="animate-float">💐</span>
