@@ -10,11 +10,8 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist in production
-  const staticPath =
-    process.env.NODE_ENV === "production"
-      ? path.resolve(__dirname)
-      : path.resolve(__dirname, "..", "dist");
+  // Serve static files from dist folder (built client files)
+  const staticPath = path.resolve(__dirname, "..", "dist");
 
   app.use(express.static(staticPath));
 
