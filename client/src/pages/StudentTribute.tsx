@@ -26,22 +26,34 @@ const students: Student[] = [
     id: "1",
     name: "Elbek",
     image: "/images/elbek/elbek_card.jpg",
-    letter: "Aziz onajonim sizni 8-mart bayrami bilan chin yurakdan tabriklayman. Sizga sog‘lik baxt va doimo quvonch tilayman siz meni eng mehribon va qadrli insonimsiz.",
+    letter: "Aziz Oyijon, siz mening hayotimning eng muhim shaxsiysiz. Barcha mehribonlik va qo'llab-quvvatlashingiz uchun rahmat. Siz bilan faxrlanaman!",
     slideImages: [
       "/images/elbek/photo1.jpg",
       "/images/elbek/photo2.jpg",
       "/images/elbek/photo3.jpg",
       "/images/elbek/photo4.jpg",
     ],
-  },  {
+  },
+  {
     id: "2",
-    name: "Abdulhamid",
+    name: "Abdulxamid",
     image: "/images/hamid/hamid_card.jpg",
-    letter: "Aziz onajonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
+    letter: "Aziz oyijonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
     slideImages: [
       "/images/hamid/photo1.jpg",
       "/images/hamid/photo2.jpg",
       "/images/hamid/photo3.jpg",
+    ],
+  },
+  {
+    id: "10",
+    name: "Shoxjahon",
+    image: "/images/shokhjakhon/shokhjakhon_card.jpg",
+    letter: "Aziz oyijonim, 8-mart muborak bo'lsin! Siz mening hayotimdagi eng qadrli insonsiz. Bergan mehringiz va g'amxo'rligingiz uchun katta rahmat. Sizni juda yaxshi ko'raman. Doim sog'-salomat va baxtli bo'ling. 🌸💐",
+    slideImages: [
+      "/images/shokhjakhon/photo2.jpg",
+      "/images/shokhjakhon/photo3.jpg",
+      "/images/shokhjakhon/photo4.jpg",
     ],
   },
   {
@@ -56,7 +68,91 @@ const students: Student[] = [
       "/images/alixan/photo4.jpg",
       "/images/alixan/photo5.jpg",
     ],
-  },];
+  },
+  {
+    id: "4",
+    name: "Behruz",
+    image: "/images/behruz/behruz_card.jpg",
+    letter: "Sevimli oyijonim, 8-mart bilan tabriklayman! Mehringiz va g‘amxo‘rligingiz uchun katta rahmat. Sizni juda yaxshi ko‘raman.",
+    slideImages: [
+      "/images/behruz/photo1.jpg",
+      "/images/behruz/photo1.png",
+    ],
+  },
+  {
+    id: "5",
+    name: "Fayxulloh",
+    image: "/images/fayzik/fayzik_card.jpg",
+    letter: "Sevimli oyijon, siz har doim yonimda bo'lgansiz. Sizni doimo qo'llab-quvvatlayman va sizni yaxshi ko'raman. 8 martingiz bilan!",
+    slideImages: [
+      "/images/fayzik/photo1.jpg",
+    ],
+  },
+  {
+    id: "6",
+    name: "Jasmina",
+    image: "/images/jasmina/jasmina_card.jpg",
+    letter: "Aziz Oyijon, sizning kulgingiz va mehringiz har kuni meni quvontiradi. 8-mart Bayramingiz muborak!",
+    slideImages: [
+      "/images/jasmina/photo1.jpg",
+      "/images/jasmina/photo2.jpg",
+      "/images/jasmina/photo3.jpg",
+    ],
+  },
+  {
+    id: "7",
+    name: "Mohinur",
+    image: "/images/mohinur/mohinur_card.jpg",
+    letter: "Mening kuchli va mehribon Oyijonimga, sizni doimo yaxshi ko'raman. Bayramingiziz bilan!",
+    slideImages: [
+      "/images/mohinur/photo1.jpg",
+    ],
+  },
+  {
+    id: "8",
+    name: "Ruxshona",
+    image: "/images/ruxshona/ruxshona_card.jpg",
+    letter: "Мамочка, поздравляю тебя! Спасибо за твою любовь и заботу. Желаю тебе здоровья, счастья и много улыбок. Я тебя очень люблю! 💖",
+    slideImages: [
+      "/images/ruxshona/photo1.jpg",
+      "/images/ruxshona/photo2.jpg",
+      "/images/ruxshona/photo3.jpg",
+      "/images/ruxshona/photo4.jpg",
+    ],
+  },
+  {
+    id: "9",
+    name: "Sarvar",
+    image: "/images/sarvar/sarvar_card.jpg",
+    letter: "Aziz oyijonim, sizning mehringiz hayotimni yorug‘ qiladi. 8-mart muborak! Sizni juda yaxshi ko‘raman.",
+    slideImages: [
+      "/images/sarvar/photo1.jpg",
+      "/images/sarvar/photo2.jpg",
+      "/images/sarvar/photo3.jpg",
+    ],
+  },
+  {
+    id: "10",
+    name: "Shoxjahon",
+    image: "/images/shokhjakhon/shokhjakhon_card.jpg",
+    letter: "Sevimli Oyijon, men sizni doimo qo'llab-quvvatlayman va yaxshi ko'raman. 8-mart Bayramingiz muborak!",
+    slideImages: [
+      "/images/shokhjakhon/photo2.jpg",
+      "/images/shokhjakhon/photo3.jpg",
+      "/images/shokhjakhon/photo4.jpg",
+    ],
+  },
+  {
+    id: "11",
+    name: "Abdulaziz",
+    image: "/images/abdulaziz/abdulaziz_card.jpg",
+    letter: "Oyijonim, bayramingiz muborak! Doim sog‘-salomat, baxtli bo‘lib yuring. Siz bilan faxrlanaman va sizni juda qadrlayman.",
+    slideImages: [
+      "/images/abdulaziz/photo1.jpg",
+      "/images/abdulaziz/photo2.jpg",
+    ],
+  },
+];
 
 export default function StudentTribute() {
   const params = useParams<{ id: string }>();
@@ -136,7 +232,7 @@ export default function StudentTribute() {
             {student.name}ning tabrigi
           </h1>
           <p className="text-xl text-purple-900 font-semibold">
-            Onam uchun samimiy xabar
+            Oyijon uchun samimiy xabar
           </p>
         </div>
 
@@ -166,7 +262,7 @@ export default function StudentTribute() {
                     key={index}
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-contain flex-shrink-0"
+                    className="w-full h-full object-cover flex-shrink-0"
                   />
                 ))}
               </div>
@@ -180,16 +276,16 @@ export default function StudentTribute() {
             <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none z-20">
               <button
                 onClick={prevSlide}
-                className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 hover:shadow-pink-400/50 hover:shadow-2xl"
+                className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-2 sm:p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 hover:shadow-pink-400/50 hover:shadow-2xl"
               >
-                <ChevronLeft className="w-8 h-8" />
+                <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 hover:shadow-pink-400/50 hover:shadow-2xl"
+                className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-2 sm:p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 hover:shadow-pink-400/50 hover:shadow-2xl"
               >
-                <ChevronRight className="w-8 h-8" />
+                <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
               </button>
             </div>
 
@@ -229,7 +325,7 @@ export default function StudentTribute() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-4xl">💌</span>
                 <h2 className="text-3xl sm:text-4xl font-bold text-pink-600">
-                  Onamga maktub
+                  Oyijonga maktub
                 </h2>
               </div>
 

@@ -26,22 +26,34 @@ const students: Student[] = [
     id: "1",
     name: "Elbek",
     image: "/images/elbek/elbek_card.jpg",
-    letter: "Aziz onam, siz mening hayotimning eng muhim shaxsiysiz. Barcha mehribonlik va qo'llab-quvvatlashingiz uchun rahmat. Sizни bilan faxrlanaman!",
+    letter: "Aziz oyijon, siz mening hayotimning eng muhim shaxsiysiz. Barcha mehribonlik va qo'llab-quvvatlashingiz uchun rahmat. Siz bilan faxrlanaman!",
     slideImages: [
       "/images/elbek/photo1.jpg",
       "/images/elbek/photo2.jpg",
       "/images/elbek/photo3.jpg",
       "/images/elbek/photo4.jpg",
     ],
-  },  {
+  },
+  {
     id: "2",
-    name: "Abdulhamid",
+    name: "Abdulxamid",
     image: "/images/hamid/hamid_card.jpg",
-    letter: "Aziz onajonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
+    letter: "Aziz oyijonim, sizni juda ham yaxshi ko'raman. Siz mening hayotimdagi eng qadrli insonsiz. Har doim yonimda bo'lib, mehr va qo'llab-quvvatlashingiz uchun katta rahmat. 🌸",
     slideImages: [
       "/images/hamid/photo1.jpg",
       "/images/hamid/photo2.jpg",
       "/images/hamid/photo3.jpg",
+    ],
+  },
+  {
+    id: "10",
+    name: "Shoxjahon",
+    image: "/images/shokhjakhon/shokhjakhon_card.jpg",
+    letter: "Aziz oyijonim, 8-mart muborak bo'lsin! Siz mening hayotimdagi eng qadrli insonsiz. Bergan mehringiz va g'amxo'rligingiz uchun katta rahmat. Sizni juda yaxshi ko'raman. Doim sog'-salomat va baxtli bo'ling. 🌸💐",
+    slideImages: [
+      "/images/shokhjakhon/photo2.jpg",
+      "/images/shokhjakhon/photo3.jpg",
+      "/images/shokhjakhon/photo4.jpg",
     ],
   },
   {
@@ -56,7 +68,80 @@ const students: Student[] = [
       "/images/alixan/photo4.jpg",
       "/images/alixan/photo5.jpg",
     ],
-  },];
+  },
+  {
+    id: "4",
+    name: "Behruz",
+    image: "/images/behruz/behruz_card.jpg",
+    letter: "Sevimli oyijonim, 8-mart bilan tabriklayman! Mehringiz va g‘amxo‘rligingiz uchun katta rahmat. Sizni juda yaxshi ko‘raman.",
+    slideImages: [
+      "/images/behruz/photo1.jpg",
+      "/images/behruz/photo1.png",
+    ],
+  },
+  {
+    id: "5",
+    name: "Fayxulloh",
+    image: "/images/fayzik/fayzik_card.jpg",
+    letter: "Sevimli oyijon, siz har doim yonimda bo'lgansiz. Sizni doimo qo'llab-quvvatlayman va sizni yaxshi ko'raman. 8 martingiz bilan!",
+    slideImages: [
+      "/images/fayzik/photo1.jpg",
+    ],
+  },
+  {
+    id: "6",
+    name: "Jasmina",
+    image: "/images/jasmina/jasmina_card.jpg",
+    letter: "Aziz oyijon, sizning kulgingiz va mehringiz har kuni meni quvontiradi. 8-mart Bayramingiz muborak!",
+    slideImages: [
+      "/images/jasmina/photo1.jpg",
+      "/images/jasmina/photo2.jpg",
+      "/images/jasmina/photo3.jpg",
+    ],
+  },
+  {
+    id: "7",
+    name: "Mohinur",
+    image: "/images/mohinur/mohinur_card.jpg",
+    letter: "Mening kuchli va mehribon oyijonimga, sizni doimo yaxshi ko'raman. Bayramingiziz bilan!",
+    slideImages: [
+      "/images/mohinur/photo1.jpg",
+    ],
+  },
+  {
+    id: "8",
+    name: "Ruxshona",
+    image: "/images/ruxshona/ruxshona_card.jpg",
+    letter: "Мамочка, поздравляю тебя! Спасибо за твою любовь и заботу. Желаю тебе здоровья, счастья и много улыбок. Я тебя очень люблю! 💖",
+    slideImages: [
+      "/images/ruxshona/photo1.jpg",
+      "/images/ruxshona/photo2.jpg",
+      "/images/ruxshona/photo3.jpg",
+      "/images/ruxshona/photo4.jpg",
+    ],
+  },
+  {
+    id: "9",
+    name: "Sarvar",
+    image: "/images/sarvar/sarvar_card.jpg",
+    letter: "Aziz oyijonim, sizning mehringiz hayotimni yorug‘ qiladi. 8-mart muborak! Sizni juda yaxshi ko‘raman.",
+    slideImages: [
+      "/images/sarvar/photo1.jpg",
+      "/images/sarvar/photo2.jpg",
+      "/images/sarvar/photo3.jpg",
+    ],
+  },
+  {
+    id: "11",
+    name: "Abdulaziz",
+    image: "/images/abdulaziz/abdulaziz_card.jpg",
+    letter: "Oyijonim, bayramingiz muborak! Doim sog‘-salomat, baxtli bo‘lib yuring. Siz bilan faxrlanaman va sizni juda qadrlayman.",
+    slideImages: [
+      "/images/abdulaziz/photo1.jpg",
+      "/images/abdulaziz/photo2.jpg",
+    ],
+  },
+];
 
 export default function Home() {
   const [animateCards, setAnimateCards] = useState(false);
